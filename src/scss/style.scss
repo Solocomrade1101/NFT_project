@@ -1,0 +1,56 @@
+// файлы
+@import "nullstyle";
+@import "header";
+@import "discover";
+@import "seller";
+@import "auction";
+@import "collection";
+@import "artworks";
+@import "instruction";
+@import "form";
+@import "footer";
+@import "scrollAnimation";
+
+
+
+
+// шрифты
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');// миксины
+@mixin text($fw, $fz, $lh){
+   font-weight: $fw;
+   font-size: $fz;
+   line-height: $lh;
+}
+
+body{
+   font-family: "Montserrat";
+   background: #1F1721;
+   color: #fff;
+   cursor: default;
+}
+
+.wrapper{
+   height: 100%;
+   max-width: 1486px;
+   margin: 0 auto;
+}
+@media (max-width:1400px){
+   .wrapper{
+      max-width: 1100px;
+      margin: 0 auto;
+   }
+}
+.button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+   color: #FFFFFF;
+   @include text(300, 16px, 20px);
+   overflow: hidden;
+   transition: all 0.3s ease;
+   &:hover{
+      transition: all 0.3s ease;
+   }
+}

@@ -1,0 +1,276 @@
+@mixin text($fw, $fz, $lh){
+   font-weight: $fw;
+   font-size: $fz;
+   line-height: $lh;
+}
+
+.header {
+
+}
+.header .container{
+   max-width: 1364px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 59px;
+   margin-bottom: 42px;
+}
+@media (max-width:1400px){
+   .header .container{
+      padding-top: 30px;
+      max-width: 1100px;
+   }
+}
+@media (max-width:1200px){
+   .header .container{
+      max-width: 88.2%;
+      h3{
+         font-size: 24px;
+      }
+      
+   }
+}
+.logo{
+   position: relative;
+   display: flex;
+   align-items: center;
+
+}
+.logo::before {
+   content: "";
+   display: block;
+   width: 60px;
+   height: 53px;
+   border-radius: 50%;
+   background: #8F20A1;
+   filter: blur(50px);
+   position: absolute;
+   z-index: -1;
+   top: 10px;
+   left: 40px;
+}
+.logo__img {
+   margin-right: 15px;
+}
+.logo__title {
+   @include text(600, 28px, 34.13px);
+   
+}
+
+$color1: #ffffff;
+$color2: #8F20A1;
+$transition1: all 180ms ease-in-out;
+.menu {
+
+}
+@media (max-width:1200px){
+   .menu{
+      display: none;
+   }
+}
+
+.navigation {
+   padding-top: 13px;
+}
+.navigation__list {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   li:last-child a{
+      margin-right: 0;
+   }
+   &:hover{
+      .navigation__link a{
+         color: rgba($color1,0.55);
+         &:hover{
+            color: $color1;
+            text-shadow: 
+               0 0 10px rgba(255,255,255, 1),
+               0 0 6px rgba(255, 255, 255, .8);
+            &::after{
+               width: calc(100%)
+            }
+         }
+      }
+   }
+}
+.navigation__link a{
+   margin-right: 30px;
+   @include text(300, 16px, 19.5px);
+   transition: $transition1;
+   position: relative;
+   
+   &::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      background: $color2;
+      bottom: 0.65rem;
+      top: 23px;
+      left: 0px; 
+      transition: $transition1;
+   }
+} 
+
+.search-info {
+   display: flex;
+}
+
+
+
+
+
+.search-button {
+   background: rgba(0, 0, 0, 0.16);
+   border: 1px solid #FFFFFF;
+   margin-right: 20px;
+   width: 114px;
+   padding: 11px 0;
+   transition: all ease 0.4s;
+   path{
+      transition: all ease 0.4s;
+
+   }
+   &:hover{
+      svg{
+         margin-right: 6.8px;
+      }
+      background: rgb(255, 255, 255);
+      font-weight: 500;
+      color: #1F1721;
+      path{
+         fill:rgb(0, 0, 0)
+      }
+      
+   }
+}
+@media (max-width:1200px){
+   .button.search-button{
+      display: none;
+   }
+}
+
+
+.search-button__img {
+   margin-right: 7px;
+   
+}
+.search-button__text {
+}
+
+
+
+.explor-button {
+   width: 114px;
+   background: #882898;
+   box-shadow: 3px 4px 8px rgba(201, 55, 225, 0.15);
+   &:hover{
+      background: #DC00E0;
+      box-shadow: 0px 0px 16px #DC00E0;
+   }
+}
+@media (max-width:1200px){
+   .button.explor-button{
+      display: none;
+   }
+}
+
+.search-info__burger-search{
+   display: none;
+   margin-right: 16px;
+   cursor: pointer;
+   &:hover{
+      path{
+         stroke: #8F20A1;
+      }
+   }
+   &:active{
+      path{
+         stroke: #8F20A1;
+      }
+   }
+}
+.search-info__burger-menu{
+   display: none;
+   cursor: pointer;
+   &:hover{
+      path{
+         stroke: #8F20A1;
+      }
+   }
+   &:active{
+      path{
+         stroke: #8F20A1;
+      }
+   }
+}
+@media (max-width:1200px){
+   .search-info__burger-search{
+      display: block;
+   }
+   .search-info__burger-menu{
+      display: block;
+
+   }
+}
+.search-info__burger-menu-cross{
+   transition: all ease 1s;
+   display: none;
+
+}
+
+
+.adaptive-menu {
+   height: 85%;
+   display: none;
+
+   
+}
+.adaptive-menu .container{
+padding-top: 80px;
+min-height: 100%;
+max-width: 88.2%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+
+
+}
+.container {
+}
+.adaptive-menu__list-block {
+   text-align: center;
+   flex: 1 1 auto;
+}
+.adaptive-menu__list {
+   @include text(600, 28px, 36px);
+   
+}
+.adaptive-menu__link {
+   margin-bottom: 32px;
+   a:active{
+      color: #8F20A1;
+   }
+}
+.adaptive-menu__items-block {
+   margin-bottom: 60px;
+   width: 65%;
+   
+
+   flex: 0 1 auto;
+}
+.adaptive-menu__items {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   
+
+}
+.adaptive-menu__item {
+   
+}
+

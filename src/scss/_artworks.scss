@@ -1,0 +1,248 @@
+@mixin text($fw, $fz, $lh){
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+.artworks{
+  margin-bottom: 130px;
+  overflow: hidden;
+}
+@media (max-width:792px){
+  .artworks{
+    margin-bottom: 100px;
+  }
+}
+.artworks .container {
+  max-width: 1148px;
+  margin: 0 auto;
+}
+@media (max-width:1400px){
+  .artworks .container{
+    max-width: 1034px;
+  }
+}
+@media (max-width:1100px){
+  .artworks .container{
+
+    margin-left: 6.62%;
+    margin-right: 0;
+  }
+}
+
+.container {
+  
+}
+.artworks__header {
+  max-width: 329px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+@media (max-width:1400px){
+  .artworks__header{
+    margin-left: 0;
+  }
+}
+@media (max-width:792px){
+  .artworks__header{
+    margin-bottom: 25px;
+  }
+}
+.artworks__title {
+  @include text(600, 40px, 48.76px);
+}
+@media (max-width:792px){
+  .artworks__title{
+    font-size: 28px;
+  }
+}
+.artworks__menu {
+  max-width: 1016px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+@media (max-width:1400px){
+  .artworks__menu{
+    width: 1016px;
+    margin-left: 0;
+  }
+}
+@media (max-width:1100px){
+  .artworks__menu{
+    overflow: hidden;
+  }
+}
+@media (max-width:792px){
+  .artworks__menu{
+    margin-bottom: 30px;
+  }
+}
+.artworks__navigation {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.artworks__list {
+  display: flex;
+  justify-content: space-between;
+}
+.artworks__link {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  
+  border-radius: 12px 12px 0px 0px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  &:not(.artworks__link-active):hover{
+    background: rgba(217, 217, 217, 0.07);
+    .artworks__genre{
+      color: #ffffffe1;
+    }
+    
+  }
+}
+.artworks__link-active{
+  background: rgba(217, 217, 217, 0.227);
+  .artworks__genre{
+    font-weight: 300;
+    color: #ffffff;
+  }
+}
+.artworks__genre {
+  @include text(200, 20px, 24.38px);
+  color: #ffffff8b;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+.artworks__examples {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  div:last-child{
+    margin-right: 0;
+  }
+}
+@media (max-width:1200px){
+  .artworks__examples {
+    max-width: 100%;
+    div:nth-child(3){
+      display: none;
+    }
+  }
+}
+@media (max-width:1100px){
+  .artworks__examples {
+    overflow: hidden;
+    justify-content: flex-start;
+    div:nth-child(3){
+      display: block;
+    }
+  }
+}
+.artworks__example {
+  max-width: 265px;
+  background: #2E0833;
+  border-radius: 27px;
+  padding: 10px;
+  margin-right: 28px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  &:hover{
+    // border: 1px solid #5C1765;
+    box-shadow: 0 0 15px #862294;
+  }
+  
+}
+@media (max-width:1400px){
+  .artworks__example{
+    margin-right: 10px;
+  }
+}
+@media (max-width:1200px){
+  .artworks__example{
+    margin-right: 28px;
+  }
+}
+.example {
+}
+.example__content {
+  max-width: 245px;
+  margin: 0 auto;
+  padding-bottom: 14px;
+}
+.example__img {
+  margin-bottom: 10px;
+  img{
+    width: 245px;
+  }
+}
+.example__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.example__title {
+  @include text(400, 24px, 29.26px);
+
+}
+.example__result {
+  border: 1px solid #A658B3;
+  border-radius: 10px;
+  padding: 3px 12px;
+  margin-top: 3px;
+}
+.example__result-text {
+  @include text(400, 15px, 18.29px);
+
+}
+.example__studio {
+  @include text(200, 16px, 19.5px);
+}
+.example__likes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    background: #D000F3;
+    filter: blur(45px);
+  }
+}
+
+.example__likes-img {
+  margin-right: 5px;
+  width: 32px;
+}
+.example__likes-text {
+  @include text(600, 24px, 29.26px);
+}
+.example__available {
+  @include text(200, 15px, 18.29px);
+  color: #FF35D3;
+
+}
+.artworks__button-block {
+  max-width: 140px;
+  margin: 0 auto;
+}
+.artworks__button {
+  @include text (400, 15px, 18.29px);
+  background: #A658B3;
+  box-shadow: 3px 3px 14px rgba(166, 88, 179, 0.36);
+  padding: 10px 27px;
+  &:hover{
+    background: #DC00E0;
+         box-shadow: 0px 0px 16px #DC00E0;
+         color: #fff;
+  }
+}
+.button {
+}

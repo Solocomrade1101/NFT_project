@@ -1,0 +1,131 @@
+@mixin text($fw, $fz, $lh){
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+.instruction {
+  margin-bottom: 130px;
+
+}
+.instruction .container {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+} 
+@media (max-width:792px){
+  .instruction{
+    margin-bottom: 100px;
+  }
+}
+@media (max-width:1100px){
+  .instruction .container{
+    display: block;
+  }
+}
+.instruction__start {
+  max-width: 331px;
+  margin-right: 191px;
+  padding-top: 125px;
+}
+@media (max-width:1100px){
+  .instruction__start {
+    padding-top: 0;
+    max-width: 478px;
+    margin-bottom: 52px;
+  }
+}
+@media (max-width:792px){
+  .instruction__start{
+    margin-right: 0;
+  }
+}
+.instruction__title {
+  @include text(600, 40px, 48.41px);
+  margin-bottom: 20px;
+  font-family: 'inter', sans-serif;
+}
+.instruction__text {
+  @include text(300, 20px, 28.2px);
+  margin-bottom: 20px;
+  font-family: 'inter', sans-serif;
+}
+@media (max-width:1100px){
+  .instruction__text{
+    font-size: 16px;
+    line-height: 19.5px;
+  }
+}
+@media (max-width:792px){
+  .instruction__title{
+    font-size: 28px;
+  }
+}
+.instruction__button {
+  font-size: 15px;
+  background: #A658B3;
+  box-shadow: 3px 3px 14px rgba(166, 88, 179, 0.36);
+  padding: 10px 29px;
+  &:hover{
+    background: #DC00E0;
+    //  border: 1px solid #DC00E0;
+     box-shadow: 0px 0px 16px #DC00E0;
+     color: #fff;
+  }
+}
+.button {
+}
+.instruction__steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px 72px;
+}
+@media (max-width:1100px){
+  .instruction__steps{
+    justify-content: center;
+  }
+}
+@media (max-width:640px){
+  .instruction__steps{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.instruction__step {
+  max-width: 270px;
+  border-radius: 27px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.step {
+  position: relative;
+  border-radius: 27px;
+  background: #1F1721;
+  z-index: -2;
+  background: linear-gradient(#1F1721, #1F1721) padding-box,
+  linear-gradient(to right, #E12DFF , transparent 60%) border-box;
+border-radius: 27px;
+border: 1px solid transparent;
+
+}
+.step__img-block {
+  background: rgba(223, 44, 253, 0.24);
+border: 1px solid #D32BEF;
+border-radius: 7px;
+padding: 4px 8px;
+width: 54px;
+margin-bottom: 11px;
+}
+.step__img {
+}
+.step__title {
+  @include text(500, 16px, 19.5px);
+  margin-bottom: 11px;
+
+}
+.step__text {
+  @include text(200, 15px, 18.29px);
+  margin-bottom: 18px;
+  margin-right: 20px;
+}

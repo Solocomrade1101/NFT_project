@@ -1,0 +1,139 @@
+@mixin text($fw, $fz, $lh){
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+.footer{
+  padding-bottom: 130px;
+}
+@media (max-width:1400px){
+  .footer{padding-bottom: 40px;}
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width:1400px){
+  .footer .container{
+    max-width: 770px;
+    flex-direction: column-reverse;
+    
+  }
+}
+@media (max-width:900px){
+  .footer .container{
+    max-width: 88.2%;
+    
+  }
+}
+.container {
+}
+.footer__conclusion {
+  max-width: 319px;
+  
+  .logo{
+    margin-bottom: 37px;
+    &::before{
+      content: '';
+      display: none;
+    }
+  }
+  .logo__title{
+    @include text(600, 40px, 48.76px);
+  }
+}
+@media (max-width:1400px){
+  .footer__conclusion{
+    max-width: 100%;
+    br{
+      display: none;
+    }
+  }
+}
+@media (max-width:792px){
+  .footer__conclusion{
+    .logo__title{
+      font-size: 28px;
+    }
+    .logo{
+      margin-bottom: 22px;
+    }
+  }
+}
+.logo {
+}
+.logo__img {
+}
+.logo__title {
+}
+
+.footer__text {
+  @include text(200, 18px, 21.94px);
+  margin-bottom: 25px;
+  color: #ffffff97;
+}
+.footer__social {
+  max-width: 166px;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+  li:last-child{
+    margin-right: 0;
+  }
+}
+.footer__item {
+  margin-right: 10px;
+}
+.footer__navigation {
+
+}
+@media (max-width:1400px){
+  .footer__navigation{
+    margin-bottom: 52px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  }
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: 131px 200px 125px 98px;
+  grid-template-rows: repeat(5 24px);
+  gap: 34px 72px;
+}
+@media (max-width:1400px){
+  .footer__links{
+    padding-bottom: 52px;
+  }
+}
+@media (max-width:900px){
+  .footer__links{
+    justify-content: center;
+    justify-items: center;
+
+    gap: 24px 72px;
+    grid-template-columns:  200px 200px;
+    grid-template-rows: repeat(10 24px);
+  }
+}
+@media (max-width:500px){
+  .footer__links{
+    gap: 14px 10px;
+    grid-template-columns:  170px 170px;
+  }
+}
+.footer__link {
+  @include text(400, 20px, 24.38px);
+  
+  a{
+    transition: all ease 0.3s;
+  }
+  a:hover{
+    color: #A658B3;
+  }
+}
+@media (max-width:792px){
+  .footer__link{
+    font-size: 16px;
+  }
+}

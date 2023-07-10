@@ -237,6 +237,7 @@ margin-right: 60px;
 }
 @media (max-width:1400px){
   .seller__items{
+    overflow-x: scroll;
     grid-template-columns: 295px 295px 295px;
     div:nth-child(4n){
       display: none;
@@ -245,7 +246,8 @@ margin-right: 60px;
 }
 @media (max-width:792px){
   .seller__items{
-    grid-template-columns: repeat(8, 295px);
+    overflow-x: scroll;
+    grid-template-columns: repeat(6, 297px) 10px;
     grid-template-rows: 1fr;
   }
 }

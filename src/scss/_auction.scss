@@ -99,6 +99,7 @@
 }
 @media (max-width:1100px){
   .slider{
+    overflow-x: scroll;
     width: 100%;
     justify-content: flex-start;
   }

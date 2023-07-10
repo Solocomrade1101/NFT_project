@@ -72,9 +72,13 @@
 @media (max-width:840px){
   .collection__items{
     overflow: hidden;
+    overflow-x: scroll;
     grid-template-rows: 339px;
-    grid-template-columns: repeat(6, 369px);
+    grid-template-columns: repeat(6, 369px) 10px;
     justify-content: start;
+    div:nth-child(2n+4){
+      display: block;
+    }
   }
 }
 
